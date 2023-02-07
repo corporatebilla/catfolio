@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+        html {
+            margin: 0;
+            padding: 0;
+            color: var(--fg-lite);
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--fg-color);
+        }
+
+        :root {
+            --bg-color: #2D033B;
+            --bg-lite: #810CA8;
+            --fg-color: #C147E9;
+            --fg-lite: #E5B8F4;
+        }
+
+        .container {
+            height: auto;
+            width: 250px;
+            text-align: center;
+            margin: 100px auto;
+            border-radius: 20px;
+            background-color: var(--bg-color)
+        }
+
+        .container #dp {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            border: var(--bg-color) solid 5px;
+            /* display: inline-block; */
+            margin: 0px auto;
+            margin-top: -50px;
+        }
+
+        #memebox {
+            height: 200px;
+            width: 200px;
+            margin: 0px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: var(--bg-lite)
+        }
+
+        #memeimg {
+            height: 100%;
+            width: 100%;
+            margin: 0px auto;
+            overflow: hidden;
+            background-color: aqua;
+        }
+
+        button {
+            outline: none;
+            height: 40px;
+            width: 200px;
+            margin: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            background-color: var(--fg-color);
+            font-family: 'Comic Neue', cursive;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+            color: var(--fg-lite);
+        }
+
+        a:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="dp" src="https://i.pinimg.com/564x/ab/70/04/ab7004c257e84d9fc6dbd9670ca3570a.jpg" alt="">
+        <h2> <a href="https://instagram.com/corporatebilla">Corporate Billa :)</a> </h2>
+        <div class="memebar">
+            <div id="memebox">
+                <img src="https://i.pinimg.com/564x/ab/70/04/ab7004c257e84d9fc6dbd9670ca3570a.jpg" alt="" id="memeimg">
+            </div>
+            <button onclick="getMeme()" id="btn">Click to Get MEME </button>
+        </div>
+        <button> Hemlo</button>
+    </div>
+    <script>
+        let memesImg = [
+            "https://i.ytimg.com/vi/Q6Nsvrnnug8/mqdefault.jpg",
+            "https://a.pinatafarm.com/1092x612/d47afa3656/coughing-cat-dcbc3e50b235f7aa3793bfa07959fb7a-meme.jpeg/m/522x0",
+            "https://stickerly.pstatic.net/sticker_pack/6zMOx6ZOhuUwbQUnmouqPw/6K55MX/3/3845b7cc-d6a4-40bd-9611-a0d5b9c19014.png"
+        ]
+
+        function getMeme() {
+            let randomIndex = Math.floor(Math.random() * memesImg.length)
+            let randomMeme = memesImg[randomIndex]
+            document.getElementById("memeimg").src = randomMeme
+            // return randomMeme
+        }
+        // const imageElement = document.getElementById("memeimg");
+        // memesImg.src = getMeme();
+
+        // document.getElementById("btn").addEventListener("click", function(){
+        //     imageElement.src = getMeme();
+        // });
+        
+    </script>
+</body>
+</html>
