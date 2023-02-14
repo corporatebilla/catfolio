@@ -27,7 +27,8 @@
 
         .container {
             height: auto;
-            width: 250px;
+            padding-bottom: 30px;
+            width: 300px;
             text-align: center;
             margin: 100px auto;
             border-radius: 20px;
@@ -41,7 +42,15 @@
             border: var(--bg-color) solid 5px;
             /* display: inline-block; */
             margin: 0px auto;
+            transition: .5s;
             margin-top: -50px;
+        }
+        #dp:hover {
+            height: 200px;
+            width: 200px;
+            margin-top: -90px;
+            transform: rotate(360deg);
+            border-radius: 20px;
         }
 
         #memebox {
@@ -90,13 +99,24 @@
         .dwnld:hover {
             color: var(--bg-color);
         }
+        .projects {
+            height: auto;
+            text-align: center;
+            margin: 10px auto;
+            width: 250px;
+            padding: 10px;
+            border-radius: 20px;
+
+            background-color: rgb(82, 9, 101);
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <img id="dp" src="https://avatars.githubusercontent.com/u/124551875?v=4" alt="">
-        <h2> <a href="https://instagram.com/corporatebilla">Corporate Billa :)</a> </h2>
+        <a href="https://instagram.com/corporatebilla"><img id="dp" src="https://avatars.githubusercontent.com/u/124551875?v=4" alt=""></a>
+        
+        <h1> <a href="https://instagram.com/corporatebilla">Corporate Billa :)</a> </h1> 
         <div class="memebar">
             <div id="memebox">
                 <img src="https://i.pinimg.com/564x/ab/70/04/ab7004c257e84d9fc6dbd9670ca3570a.jpg" alt="" id="memeimg">
@@ -104,7 +124,10 @@
             <button onclick="getMeme()" id="btn"> Get MEME </button>
         </div>
         <button><a class="dwnld" href="Jamva-Programming-Notes-Ft-corporatebilla.pdf" download="">Jamva Notes</a></button>
-        <button><a class="dwnld" href="https://corporatebilla.github.io/neonLove/">Neon Love</a></button>
+        <div class="projects">
+            <h2>Cool Projects</h2>
+            <button><a class="dwnld" href="https://corporatebilla.github.io/neonLove/">Neon Love</a></button>
+        </div>
     </div>
     <script>
         let memesImg = [
